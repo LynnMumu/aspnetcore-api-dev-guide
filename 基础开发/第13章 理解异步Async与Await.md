@@ -105,7 +105,7 @@ namespace WebAPITest.Controllers
 }
 ```
 从测试返回结果来看，整个执行过程大约耗时6秒：
-![be9d7c9e9a508f718400a0bd9be00612.png](en-resource://database/778:1)
+![1730441953437](https://github.com/user-attachments/assets/9f07136d-1ba5-4f8a-a660-b12a1472b279)
 
 2. 将同步方法改写为异步方法后：
 
@@ -165,7 +165,7 @@ namespace WebAPITest.Controllers
 }
 ```
 从测试返回结果来看，整个执行过程大约耗时3秒，这就是最长作业的执行时间：
-![501ae4b991c5bda986dca0366b757ddf.png](en-resource://database/780:1)
+![1730441969054](https://github.com/user-attachments/assets/fb6ca62d-727f-424f-9bfe-2dd082c8ea81)
 
 * 需要注意的是，使用异步方法时，所有从上到下的调用都必须采用异步形式。另外，`await` 的位置非常重要。如果将 `await` 放置在以下位置，程序的行为将与同步方法相同，依然是耗时6秒。
 ```C#
