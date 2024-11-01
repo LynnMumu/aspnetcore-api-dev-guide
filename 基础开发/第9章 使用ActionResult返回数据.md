@@ -175,7 +175,7 @@ public ActionResult<NewsDto> Post([FromBody] NewsPostDto value)
     return CreatedAtAction(nameof(Get), new { NewsId = insert.NewsId }, insert);
 }
 ```
->`CreatedAtAction` 用于在控制器中返回一个` HTTP 201 Created` 响应。它通常用于创建资源后，向客户端返回新创建资源的位置信息。这个方法不仅会返回资源的表示，还会生成包含一个 Location 头的响应，指向新创建资源的 `URI`，以便客户端可以使用该 `URI` 进行后续的操作。
+`CreatedAtAction` 用于在控制器中返回一个` HTTP 201 Created` 响应。它通常用于创建资源后，向客户端返回新创建资源的位置信息。这个方法不仅会返回资源的表示，还会生成包含一个 Location 头的响应，指向新创建资源的 `URI`，以便客户端可以使用该 `URI` 进行后续的操作。
 
 * `nameof(Get)`：指定生成的 `URI` 应指向 `Get` 方法。
 * `new { NewsId = insert.NewsId }`：传递新的 `NewsId`，以便生成完整的 `URI`。
@@ -183,8 +183,8 @@ public ActionResult<NewsDto> Post([FromBody] NewsPostDto value)
 
 >测试返回：
 
-![8345580d27dddf85a8a0cf7d74e98fef.png](en-resource://database/720:1)
-![00fd4b66e5b151499e2a7cd22761857e.png](en-resource://database/722:1)
+![1730440953923](https://github.com/user-attachments/assets/3e03dd7f-a62c-4e05-885c-c01f78dd1fc0)
+![1730440960315](https://github.com/user-attachments/assets/1f9a4669-9cce-46b9-9a0e-03d0ccf46629)
 
 * **PUT方法优化：**
 ```C#
