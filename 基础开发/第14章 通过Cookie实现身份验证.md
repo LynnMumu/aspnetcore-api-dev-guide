@@ -170,23 +170,23 @@ public ActionResult<IEnumerable<NewsDto>> Get([FromQuery] NewsParameter value)
 
 * 这样，当我们访问 `GET /api/news` 时，程序会自动重定向到 `/api/Login/NoLogin`。
 
-![c2e7d84a59f70ab6ffd6062e63ff3682.png](en-resource://database/784:1)
+![1730442051411](https://github.com/user-attachments/assets/23f9424b-871b-483e-8602-d8b35db4896c)
 
 * 在 `POST /api/login` 中输入正确的账户和密码（这里为了方便展示，不做密码加密处理）后，将收到一个“ok”的响应。
 
-![5fae55a2418079951666bd6464773649.png](en-resource://database/786:1)
+![1730442061800](https://github.com/user-attachments/assets/7afbc0a1-11c2-47d0-a3fd-c89187fe643d)
 
 * 此次再访问 `GET /api/news` 时，即可获取到数据：
 
-![348f88a9400e0da41f25aae1d9bb2652.png](en-resource://database/788:1)
+![1730442071357](https://github.com/user-attachments/assets/11da377e-7180-4146-a290-03be8d32f5fa)
 
 * 执行 `DELETE /api/login` 后，用户将被登出。
 
-![2d563a7c43bcc77b082e329789853f06.png](en-resource://database/790:1)
+![1730442081523](https://github.com/user-attachments/assets/3038b876-38dd-41b4-a973-32a7ce9e8a3d)
 
 * 登出后再次访问 `GET /api/news` 时，程序会自动重定向到 `/api/Login/NoLogin`。
 
-![2b1d6edab87bf9653820079781e3cea2.png](en-resource://database/792:1)
+![1730442091378](https://github.com/user-attachments/assets/16c76532-e9e7-4a6f-927e-6bac9a661ef6)
 
 #### 总结
 以上就是内置 Cookie 验证的简单示范。不过，还有一些小技巧需要分享。大多数 API 都需要登录验证，如果在每个 API 上都添加 `[Authorize]` 特性，会显得繁琐。因此，可以在 `Program.cs` 中设置全局应用，代码如下：
@@ -238,11 +238,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 * 测试接口授权为`[Authorize(Roles = "user")`]时：
 
-![acb996acf9b97488fa98b2fa756ec785.png](en-resource://database/794:1)
+![1730442116816](https://github.com/user-attachments/assets/3780c6f7-47f0-499a-8e5a-21fcb15135c2)
 
 * 测试接口授权为`[Authorize(Roles = "administrator")]`时：
 
-![af76f8e11b739715820bb4e2b25aab52.png](en-resource://database/796:1)
+![1730442128446](https://github.com/user-attachments/assets/513c6ba3-afc5-4196-ba5f-74c32ebc479a)
 
 4. 从角色表中获取多个角色权限简单步骤示例：
 * 获取角色
