@@ -42,7 +42,7 @@ Filter（过滤器）是一种用于执行控制器操作或处理请求的过�
 * 可用于修改结果，如在响应中添加自定义头部。
 
 ## 过滤器执行顺序和工作流程
-![d31e2df2348e279347f6468c30d535b9.png](en-resource://database/818:1)
+![1730442277101](https://github.com/user-attachments/assets/d30ada1c-6685-4732-9ad0-4189b0431fc1)
 
 ### 1. 请求处理管道
 
@@ -92,7 +92,8 @@ Filter（过滤器）是一种用于执行控制器操作或处理请求的过�
 ## AuthorizationFilter的自定义权限验证
 
 1. 创建一个名为 `Filters` 的文件夹，在其中新建 `NewsAuthorizationFilter.cs` 文件并继承`IAuthorizationFilter`。
-![0d994ea60bde83b3b871260f0ff910a4.png](en-resource://database/820:1)
+![1730442296053](https://github.com/user-attachments/assets/7c575a09-3b79-4262-9672-884f6ea179cc)
+
 ```C#
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -163,7 +164,7 @@ namespace WebAPITest.Filters
 3. 可以在 `Program.cs` 中全局注册过滤器，或者在控制器或操作方法上应用过滤器。
 * **局部注册**：
  注释掉之前配置的内置验证功能：
-![6c0f4d488d670ea921ac28364f0e7385.png](en-resource://database/822:1)
+![1730442315061](https://github.com/user-attachments/assets/6eae2243-ae95-48f9-9565-e17e2bd680fc)
 
 引入自定义的验证功能：
 ```C#
@@ -172,13 +173,13 @@ namespace WebAPITest.Filters
 public ActionResult<IEnumerable<NewsDto>> Get([FromQuery] NewsParameter value){}
 ```
 测试传入`Authorization`：
-![4663355f6d2322af9ed15f4890b4b096.png](en-resource://database/824:1)
+![1730442323714](https://github.com/user-attachments/assets/610ebded-34c3-4dc4-b415-c6380b305be7)
 
 测试不传入`Authorization`：
-![eda294c54ad303e17d21f9b7035419a5.png](en-resource://database/826:1)
+![1730442333042](https://github.com/user-attachments/assets/3f037469-5d94-46f9-a8cc-7ef9776e457a)
 
 测试传入`Authorization`，且值为`123`：
-![59c25cb09300efb018104847f7b267d9.png](en-resource://database/828:1)
+![1730442343290](https://github.com/user-attachments/assets/ba2f4174-5f6d-41f3-a24e-e74baa2d35e7)
 
 让`NewsAuthorizationFilter`同时继承`Attribute`和`AuthorizationFilter`，这样在使用时可以直接作为标签来应用。
 ```C#
@@ -363,8 +364,8 @@ public ActionResult Post(List<IFormFile> files,[FromForm]Guid Newsid)
 ```
 4. 测试文件上传验证功能：
 
-![873e238ce5eb20e905028388ccbb85e0.png](en-resource://database/832:1)
-![a770c8f63d485968c9bbe232de242b03.png](en-resource://database/830:1)
+![1730442366639](https://github.com/user-attachments/assets/a7677e0c-445d-468b-a586-eac20172291b)
+![1730442378397](https://github.com/user-attachments/assets/5296a18f-4c62-4761-9cdb-506fad03e5e4)
 
 ## ActionFilter之日志记录
 
@@ -443,10 +444,9 @@ namespace WebAPITest.Filters
 ```
 3. 验证结果：
 
-![2ebc8634336440d8d00064919484aab0.png](en-resource://database/838:1)
-![5b8e4258478b506de6967cf7afa1cc92.png](en-resource://database/834:1)
-![f8dd9b96cfbac83822aa4c1e1093a3a0.png](en-resource://database/836:1)
-
+![1730442391455](https://github.com/user-attachments/assets/c4cfc539-5e5e-459b-bdb9-db7ab11b048c)
+![1730442400145](https://github.com/user-attachments/assets/52a64dfc-4ddb-437e-9bee-fc2c7c8281ba)
+![1730442408438](https://github.com/user-attachments/assets/7c5bcff2-dfcd-4a90-a6dd-5dc2a9f9217c)
 
 4. 在ASP.NET Core中使用`ActionFilter`进行日志记录有许多好处，以下是一些主要的**优点**：
 
@@ -558,8 +558,8 @@ builder.Services.AddMvc(option => {
 ```
 4. 测试返回格式：
 
-![9455f8740f2a7018793946bab286abf7.png](en-resource://database/840:1)
-![b63c885cb6aa81fe11e0a42fc84a3912.png](en-resource://database/842:1)
+![1730442434681](https://github.com/user-attachments/assets/cfb2082b-323f-4a03-9d80-bd28eefcc51f)
+![1730442444954](https://github.com/user-attachments/assets/b6a01815-35b1-4c6d-9ba4-baae6e5ac17f)
 
 5. 通过`ResultFilter`实现统一的返回格式记录有多种优点，主要包括以下几点：
 
