@@ -68,26 +68,23 @@
 
 3. **选择“发布”**：
    - 在上下文菜单中选择 **“发布”**。
-![cc52bdcfea9b77b4b52907c96e5f1186.png](en-resource://database/846:1)
+![1730442508458](https://github.com/user-attachments/assets/bbfb4bf8-81bd-4254-b5b1-40194e51b324)
 
 4. **选择发布目标**：
    - 在发布向导中选择 **“文件系统”**（或其他适合你需要的选项）。
 
 5. **设置目标路径**：
    - 选择一个本地文件夹作为目标路径，发布文件将被保存到此文件夹。
-   ![5a392af1c9dfa18ac04ec6e53afc35a2.png](en-resource://database/848:1)
-   ![677fbb8ae907ec60021f951ee34d38f4.png](en-resource://database/850:1)
-   
-   
+![1730442519843](https://github.com/user-attachments/assets/ab95a618-4131-4948-8c96-56e8e8fe1b1b)
+![1730442527620](https://github.com/user-attachments/assets/017fbb48-a889-4b63-9ec6-cc93a6d4b413)
+
 6. **配置其他选项**（可选）：
    - 你可以选择发布配置（Debug/Release），并配置其他选项（如文件发布选线等）。
-   ![504176eb101a50a26cfa457458f5626f.png](en-resource://database/852:1)
-   
+![1730442542470](https://github.com/user-attachments/assets/d6273bbf-93de-4c0a-bda2-3be37c37c848)
 
 7. **点击“发布”**：
    - 完成所有设置后，点击 **“发布”** 按钮。Visual Studio 将生成并发布应用程序。
-   ![af18d2a2158a904210c7e09e48b5778e.png](en-resource://database/856:1)
-   
+![1730442554487](https://github.com/user-attachments/assets/d8867f88-6347-4cde-a682-cd45fa9768ba)
 
 ### 部署到 IIS
 
@@ -100,17 +97,14 @@
 
 2. **添加新站点**：
    - 在左侧的 **“连接”** 面板中，右键单击 **“网站”**，选择 **“添加网站”**。
-   ![65e1699f5de6fefd06535051baef9bca.png](en-resource://database/858:1)
    
 3. **设置站点名称和物理路径**：
    - 输入网站名称。
    - 选择发布文件的物理路径（即在上一步中选择的文件夹）。
    - 选择端口（默认是 80），如果需要，可以配置绑定。
-   ![44e4b8a31343ddd31fda936d2fd230a9.png](en-resource://database/870:1)
   
 4. **配置应用程序池**：
    - 确保选择了合适的应用程序池，特别是对于 ASP.NET Core 应用程序，需要使用 **“无托管代码”** 的应用程序池。
-   ![7deae72fd915a3f26cf06674e47d11c5.png](en-resource://database/864:1)
    
 5. **点击“确定”**：
    - 完成后，点击 **“确定”** 创建网站。
@@ -123,7 +117,6 @@
 
 2. **选择“安全”选项卡**：
    - 点击 **“编辑”**，添加 `IIS_IUSRS` 用户，并赋予读取权限。
-  ![9058a6d20f904bae82513dadac115938.png](en-resource://database/868:1)
 
 ### 4. 配置应用程序设置
 对于 ASP.NET Core 应用程序，确保在 `web.config` 文件中正确配置应用程序设置。
