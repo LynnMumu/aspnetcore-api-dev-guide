@@ -1,0 +1,21 @@
+# ASP.NET Core API开发指南-基础开发
+参考资料：[凯哥写程式的Blog](https://blog.talllkai.com/ASPNETCore/Catalog)
+
+## 目录
+#### [第1章 RESTful API的基本概念](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC1%E7%AB%A0%20RESTful%20API%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
+#### [第2章 LINQ基本教学](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC2%E7%AB%A0%20LINQ%E5%9F%BA%E6%9C%AC%E6%95%99%E5%AD%A6.md)
+#### [第3章 建立与数据库连接](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC3%E7%AB%A0%20%E5%BB%BA%E7%AB%8B%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5.md)
+#### [第4章 DTO基本教学](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC4%E7%AB%A0%20DTO%E5%9F%BA%E6%9C%AC%E6%95%99%E5%AD%A6.md)
+#### [第5章 获取数据GET](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC5%E7%AB%A0%20%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AEGET.md)
+#### [第6章 新增数据POST](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC6%E7%AB%A0%20%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AEPOST.md)
+#### [第7章 更新数据PUT与PATCH](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC7%E7%AB%A0%20%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AEPUT%E4%B8%8EPATCH.md)
+#### [第8章 删除数据DELETE](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC8%E7%AB%A0%20%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AEDELETE.md)
+#### [第9章 使用ActionResult返回数据](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC9%E7%AB%A0%20%E4%BD%BF%E7%94%A8ActionResult%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE.md)
+#### [第10章 数据模型验证](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC10%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81.md)
+#### [第11章 DI依赖注入](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC11%E7%AB%A0%20DI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5.md)
+#### [第12章 文档上传API](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC12%E7%AB%A0%20%E6%96%87%E6%A1%A3%E4%B8%8A%E4%BC%A0API.md)
+#### [第13章 理解异步Async与Await](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC13%E7%AB%A0%20%E7%90%86%E8%A7%A3%E5%BC%82%E6%AD%A5Async%E4%B8%8EAwait.md)
+#### [第14章 通过Cookie实现身份验证](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC14%E7%AB%A0%20%E9%80%9A%E8%BF%87Cookie%E5%AE%9E%E7%8E%B0%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.md)
+#### [第15章 JWT身份验证](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC15%E7%AB%A0%20JWT%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.md)
+#### [第16章 Filter](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC16%E7%AB%A0%20Filter.md)
+#### [第17章 IIS部署](https://github.com/LynnMumu/aspnetcore-api-dev-guide/blob/main/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/%E7%AC%AC17%E7%AB%A0%20IIS%E9%83%A8%E7%BD%B2.md)
