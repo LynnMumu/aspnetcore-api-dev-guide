@@ -116,15 +116,17 @@ public string JWTLogin(LoginPostDto value)
 }
 ```
 **测试API：**
-![d7e34c087b52aa8637e2be01cea31605.png](en-resource://database/802:1)
+![1730442189055](https://github.com/user-attachments/assets/93e37fdb-20fc-4800-96f1-ee9b5698d367)
+
 **验证token：**
-![7f763548c6ed204ec8c0facf8198d30c.png](en-resource://database/804:1)
+![1730442200069](https://github.com/user-attachments/assets/932610a2-6169-4f9e-93af-7a7cd8794a7c)
+
 如图所示，PAYLOAD:DATA 部分显示我们设置的所有数据都正确地包含在生成的 JWT 中，这表明该 JWT 是有效的。
 
 需要注意的是，这里只能放置一些非敏感信息，切勿包含机密数据，因为这些内容可以被反解码。
 
 3. 添加必要的Nuget包`Microsoft.AspNetCore.Authentication.JwtBearer`
-![6e5b5930f719619355e225725c5f417d.png](en-resource://database/808:1)
+![1730442212804](https://github.com/user-attachments/assets/50be9692-758a-4281-b066-84a99f6febf2)
 
 4. 在`Program.cs`中 配置JWT身份验证：
 ```C#
@@ -151,11 +153,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 * 未添加头部信息：
 
-![0cea0533a4bf511e729768cff6f96fb3.png](en-resource://database/812:1)
+![1730442229196](https://github.com/user-attachments/assets/cb801249-1df4-43cc-b125-ec2692654d2c)
 
 * 添加头部信息：
 
-![cfe60c08bfc898c7d706826f78c132c4.png](en-resource://database/810:1)
+![1730442239439](https://github.com/user-attachments/assets/0dfc9e2a-46e5-4839-b35c-7b598d21a667)
+
 如图所示，在 Headers 中设置 Authorization 值，格式为 "Bearer " 后接一个空格，再加上获得的 JWT，即可成功访问 API。
 
 ## JWT的优点和缺点
