@@ -36,11 +36,11 @@ public void Post(IFormFile file)
 
 **文档上传测试：**
 
-![3fa9969eac85f73a95349fdea3378fed.png](en-resource://database/746:1)
-![167c27e030c61c661b5351a07ea6a789.png](en-resource://database/748:1)
+![1730441455425](https://github.com/user-attachments/assets/8cc7181b-1345-4f75-8021-74694fbbc5b2)
+![1730441461520](https://github.com/user-attachments/assets/ffdabe7d-9c0e-4e00-aad3-53ebad50873d)
 
 2. 在项目文件夹下新建`wwwroot`文件夹存放上传的文档：
-![702b62a292f839670c8e5c59bfcdd45e.png](en-resource://database/750:1)
+![1730441467409](https://github.com/user-attachments/assets/edffcddf-dee0-4567-8d85-7311e82183b0)
 
 **完整代码：**
 ```C#
@@ -81,8 +81,8 @@ namespace WebAPITest.Controllers
 }
 ```
 **文档上传测试：**
-![580171d0b7298c1ad3caa74f7f9aad46.png](en-resource://database/752:1)
-![bec2d1090d2a447fa5feeb8652bdd460.png](en-resource://database/754:1)
+![1730441479082](https://github.com/user-attachments/assets/82dd5371-514e-47db-8d7f-d673a58c959b)
+![1730441484330](https://github.com/user-attachments/assets/e8576f68-cbbb-4b09-9f9b-465730adceaf)
 
 3. 同时上传多个文件：
 ```C#
@@ -105,14 +105,14 @@ public void Post(List<IFormFile> files)
 ```
 >`IFormFileCollection`、`IEnumerable<IFormFile>` 和 `List<IFormFile>` 都可以接收多个文档。
 
-文档上传测试：
-![d9333230ec3264eb8cfbac9b68fe34c5.png](en-resource://database/756:1)
+* 文档上传测试：
+![1730441502638](https://github.com/user-attachments/assets/69af8305-aab6-41e2-95f8-5f05d198228e)
 
 4. 如果需要在浏览器中查看文档，则需要在Program.cs中新增配置：
 ```C#
 app.UseStaticFiles();
 ```
-![530b2820592a070fd50b9adc3e990143.png](en-resource://database/758:1)
+![1730441517838](https://github.com/user-attachments/assets/de2656cb-c562-49de-852c-a2b0286f6f6f)
 
 ## 文档上传与简单传值
 简单获取传入的主键 ID，并将文件存储到对应 ID 的文件夹下，并将上传的文档数据存入NewsFiles表中。
@@ -179,13 +179,13 @@ namespace WebAPITest.Controllers
 }
 ```
 2. 文档上传测试：
-![d720b8b4824c6b8dc8c93dc6f662d516.png](en-resource://database/760:1)
-![183442a565bc3fc4c073d33df93e1ce3.png](en-resource://database/762:1)
+![1730441532635](https://github.com/user-attachments/assets/f069f00a-962d-4806-ab3d-6d5cca4fe7a0)
+![1730441538434](https://github.com/user-attachments/assets/ebe8d2a3-2c8c-4813-a677-d3ab2029a65c)
 
 ## 使用ModelBinder
 ——使用 `ModelBinder` 处理 `FormData` 的 `JSON` 字符串并反序列化为对应类对象
 
->假设需要同时上传新闻信息和相关文档的存档。
+假设需要同时上传新闻信息和相关文档的存档。
 
 1. 在NewsController.cs中新增测试代码：
 
@@ -199,7 +199,7 @@ public ActionResult POSTALL([FromForm]NewsPostDto value, IFormFileCollection fil
 
 2. 接口请求测试返回了验证错误信息。尽管添加了` [FromForm] `标签，程序仍无法自动将接收到的 `JSON` 字符串转换为相应的类。
 
-![00634db4f270acfa9a4099ebdaa703e8.png](en-resource://database/764:1)
+![1730441552485](https://github.com/user-attachments/assets/54aaa0fc-b6c9-418b-bba4-783e7d06e34a)
 
 3. 所以可以通过反序列化 `JSON` 字符串，将其转换为相应的类。
 
@@ -216,13 +216,14 @@ public ActionResult POSTALL([FromForm]string value, IFormFileCollection files)
 
 * 测试：
 
-![18b2220a8d74dd8f8c7f55868f826b72.png](en-resource://database/766:1)
+![1730441558563](https://github.com/user-attachments/assets/3edeb849-c658-4b00-af4a-b706f49f7095)
 
 * 这里**需要注意**的是，需要确保 `NewsPostDto` 的属性命名与 `JSON` 字段相符，包括大小写。
 
 4. 进一步优化下，可以使用`ModelBinder`将 HTTP 请求的内容（如查询字符串、表单数据和路由数据）绑定到控制器操作方法的参数或模型上。
 * 创建`Binders`文件夹，并新建`FormDataJsonBinder.cs`并继承`IModelBinder`。
-![c6cd229e6aaac53e813235e11642db90.png](en-resource://database/768:1)
+![1730441569106](https://github.com/user-attachments/assets/6d7f0e9e-fba6-4be2-b418-5bd0b72a26e4)
+
 ```C#
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -283,7 +284,7 @@ namespace WebAPITest.Binders
     }
 }
 ```
-* 在 `NewsController.cs` 的 `POST` 方法中使用 `FormDataJsonBinder`。
+5. 在 `NewsController.cs` 的 `POST` 方法中使用 `FormDataJsonBinder`。
 ```
 [HttpPost("UploadFiles")]
 public ActionResult POSTALL([FromForm][ModelBinder(BinderType = typeof(FormDataJsonBinder))] NewsPostDto value, IFormFileCollection files)
@@ -293,7 +294,7 @@ public ActionResult POSTALL([FromForm][ModelBinder(BinderType = typeof(FormDataJ
 ```
 
 * 测试：
-![11d4d4ef71a0a3e1644b6296aa03177f.png](en-resource://database/770:1)
+![1730441587319](https://github.com/user-attachments/assets/c7be90ac-f28e-4459-9155-33e27c520522)
 
 * 完整代码：
 ```C#
@@ -333,9 +334,8 @@ public ActionResult POSTALL([FromForm][ModelBinder(BinderType = typeof(FormDataJ
 }
 ```
 * 测试：
-![7ddbc5af4c1c3d045dde04e758653e70.png](en-resource://database/772:1)
-![c46840ff164edeedf2c30072515f85a9.png](en-resource://database/774:1)
-
+![1730441635564](https://github.com/user-attachments/assets/0b6b1de7-4b64-4ea9-92a5-af444cbe26e4)
+![1730441640770](https://github.com/user-attachments/assets/506af375-112f-47b2-b562-43d9f646f5df)
 
 #### 小结
 通过使用 `ModelBinder`，可以灵活地处理请求数据，适应不同的业务需求。无论是使用内置的 `ModelBinder` 还是创建自定义的，`ModelBinder` 都能帮助你有效地将 `HTTP` 请求转换为可用的对象模型。
