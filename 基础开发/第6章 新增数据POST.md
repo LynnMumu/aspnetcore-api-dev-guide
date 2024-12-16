@@ -1,4 +1,4 @@
-![1730440141659](https://github.com/user-attachments/assets/b9ff01be-6642-43e7-a723-9336a2924352)# 新增数据POST
+# 新增数据POST
 
 ## 目录
 - [新增数据](#新增数据)
